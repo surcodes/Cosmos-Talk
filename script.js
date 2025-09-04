@@ -98,15 +98,25 @@ window.addEventListener("load", () => {
 const hoverSound = document.getElementById("hoverSound");
 const humSound = document.getElementById("humSound");
 
-// Make sure cosmic hum starts after first interaction
-document.addEventListener("click", () => {
+// set volume
+humSound.volume = 0.3;
+hoverSound.volume = 0.6;
+
+// browsers block autoplay — wait for any interaction
+function startHum() {
   if (humSound.paused) {
-    humSound.volume = 0.3; // lower volume so it's ambient
-    humSound.play();
+    humSound.play().catch(err => {
+      console.log("Autoplay blocked:", err);
+    });
   }
+}
+
+// listen for first interaction
+["click", "keydown", "scroll"].forEach(evt => {
+  document.addEventListener(evt, startHum, { once: true });
 });
 
-// Play "whoosh" when hovering over buttons & nav links
+// hover whoosh sound
 document.querySelectorAll(".btn, .cosmic-link").forEach(el => {
   el.addEventListener("mouseenter", () => {
     hoverSound.currentTime = 0;
