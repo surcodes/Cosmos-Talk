@@ -95,48 +95,43 @@ setInterval(() => {
 window.addEventListener("load", () => {
   document.getElementById("loader").style.display = "none";
 });
-const hoverSound = document.getElementById("hoverSound");
-const humSound = document.getElementById("humSound");
 
 document.addEventListener("DOMContentLoaded", () => {
   const humSound = document.getElementById("humSound");
   const hoverSound = document.getElementById("hoverSound");
   const toggleBtn = document.getElementById("soundToggle");
 
-  humSound.volume = 0.3; // subtle background
-  hoverSound.volume = 0.6; // whoosh effect
+  if (!humSound || !hoverSound) {
+    console.warn("Audio elements not found!");
+    return;
+  }
+
+  humSound.volume = 0.3; // subtle hum
+  hoverSound.volume = 0.6;
 
   let isPlaying = false;
 
-  // Function to start music
   function startHum() {
     humSound.play().then(() => {
       isPlaying = true;
       if (toggleBtn) toggleBtn.textContent = "🔊 Sound On";
     }).catch(err => {
-      console.log("Autoplay blocked, waiting for interaction:", err);
+      console.log("Autoplay blocked, waiting for click:", err);
     });
 
     document.removeEventListener("click", startHum);
     document.removeEventListener("keydown", startHum);
   }
 
-  // First click or key starts the sound
+  // User gesture starts the hum
   document.addEventListener("click", startHum);
   document.addEventListener("keydown", startHum);
 
-  // Toggle button logic (only if button exists)
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      if (isPlaying) {
-        humSound.pause();
-        isPlaying = false;
-        toggleBtn.textContent = "🔇 Sound Off";
-      } else {
-        humSound.play();
-        isPlaying = true;
-        toggleBtn.textContent = "🔊 Sound On";
-      }
+  // Whoosh FX on hover
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      hoverSound.currentTime = 0;
+      hoverSound.play();
     });
-  }
+  });
 });
