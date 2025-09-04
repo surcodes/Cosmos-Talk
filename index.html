@@ -4,59 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cosmos Talks 2025</title>
+
   <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Cosmos Background CSS -->
-  <style>
-    body {
-      background: url('https://www.transparenttextures.com/patterns/stardust.png'), #0b0c10;
-      background-size: cover;
-      color: #f1f1f1;
-    }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                  url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover no-repeat;
-    }
-    .section-dark {
-      background-color: #0b0c10;
-      color: #fff;
-    }
-    .card {
-      background-color: #1f2833;
-      color: #f1f1f1;
-      border: none;
-    }
-    footer {
-      background-color: #0b0c10;
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Cosmos Talks 2025</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+   <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow cosmic-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold animate-brand" href="#">Cosmos Talks 2025</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
-          <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active cosmic-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link cosmic-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link cosmic-link" href="#schedule">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link cosmic-link" href="#speakers">Speakers</a></li>
+        <li class="nav-item"><a class="nav-link cosmic-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link cosmic-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- HERO SECTION -->
-  <header id="home" class="text-white text-center py-5">
+  <header id="home" class="text-white text-center py-5 fade-in">
     <div class="container">
       <h1 class="display-3 fw-bold">Cosmos Talks 2025</h1>
       <p class="lead">Science, Space & Philosophy — A Dialogue with the Greatest Minds</p>
@@ -65,7 +45,7 @@
   </header>
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="py-5 section-dark">
+  <section id="about" class="py-5 section-dark fade-in">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0">
@@ -126,33 +106,43 @@
     <div class="container">
       <h2 class="text-center mb-4">Great Minds of the Cosmos</h2>
       <div class="row g-4">
+        
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="Albert_Einstein.webp" class="card-img-top" alt="Einstein">
-            <div class="card-body">
+          <div class="card h-100 shadow-sm speaker-card overflow-hidden">
+            <div class="ratio ratio-1x1">
+              <img src="Albert_Einstein.webp" class="card-img-top object-fit-cover" alt="Einstein">
+            </div>
+            <div class="card-body text-center">
               <h5 class="card-title">Albert Einstein</h5>
               <p class="card-text">The Father of Modern Physics — unlocking relativity and showing how imagination fuels discovery.</p>
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="Stephen_Hawking.StarChild.webp" class="card-img-top" alt="Hawking">
-            <div class="card-body">
+          <div class="card h-100 shadow-sm speaker-card overflow-hidden">
+            <div class="ratio ratio-1x1">
+              <img src="Stephen_Hawking.StarChild.webp" class="card-img-top object-fit-cover" alt="Hawking">
+            </div>
+            <div class="card-body text-center">
               <h5 class="card-title">Stephen Hawking</h5>
               <p class="card-text">The Voice of the Universe — expanding our vision of black holes, time, and the destiny of space itself.</p>
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="Carl_Sagan.webp" class="card-img-top" alt="Sagan">
-            <div class="card-body">
+          <div class="card h-100 shadow-sm speaker-card overflow-hidden">
+            <div class="ratio ratio-1x1">
+              <img src="Carl_Sagan.webp" class="card-img-top object-fit-cover" alt="Sagan">
+            </div>
+            <div class="card-body text-center">
               <h5 class="card-title">Carl Sagan</h5>
               <p class="card-text">The Cosmic Storyteller — weaving science into poetry and helping us see that we are all made of starstuff.</p>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -163,46 +153,59 @@
       <h2 class="text-center mb-4">Stellar Gallery</h2>
       <div class="row g-3">
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="techfest.webp" class="img-fluid rounded shadow" alt="Gallery 1">
+          <div class="ratio ratio-1x1 overflow-hidden rounded shadow gallery-item">
+            <img src="astronaut-floating-in-space-near-earth-and-moon.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Gallery 1">
+          </div>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="tech.webp" class="img-fluid rounded shadow" alt="Gallery 2">
+          <div class="ratio ratio-1x1 overflow-hidden rounded shadow gallery-item">
+            <img src="Black_hole.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Gallery 2">
+          </div>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="fest.webp" class="img-fluid rounded shadow" alt="Gallery 3">
+          <div class="ratio ratio-1x1 overflow-hidden rounded shadow gallery-item">
+            <img src="Image-from-James-Webb-Space-Telescope-JWST-012.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Gallery 3">
+          </div>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="tf.webp" class="img-fluid rounded shadow" alt="Gallery 4">
+          <div class="ratio ratio-1x1 overflow-hidden rounded shadow gallery-item">
+            <img src="Image-from-James-Webb-Space-Telescope-JWST-018.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Gallery 4">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="py-5 section-dark">
+  <section id="contact" class="py-5 text-white contact-section">
     <div class="container">
-      <h2 class="text-center mb-4">Reach Out to the Stars</h2>
+      <h2 class="text-center mb-4">🌌 Reach Out to the Stars</h2>
       <div class="row justify-content-center">
-        <div class="col-md-6">
-          <form>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Name" required>
+        <div class="col-md-8 col-lg-6">
+          <div class="card shadow-lg border-0 contact-card">
+            <div class="card-body p-4">
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control contact-input" placeholder="✨ Your Name" required>
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control contact-input" placeholder="📧 Your Email" required>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control contact-input" rows="4" placeholder="💬 Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-light w-100 fw-bold contact-btn">
+                  🚀 Send Message
+                </button>
+              </form>
             </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-light w-100">Send Message</button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- FOOTER -->
-  <footer class="text-white text-center py-3">
+ <!-- FOOTER -->
+  <footer class="text-white text-center py-3 fade-in">
     <div class="container">
       <p class="mb-0">&copy; 2025 Cosmos Talks. All rights reserved.</p>
     </div>
@@ -210,5 +213,7 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>

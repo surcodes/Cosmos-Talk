@@ -1,0 +1,168 @@
+/* Global */
+body {
+  background: url('https://www.transparenttextures.com/patterns/stardust.png'), #0b0c10;
+  background-size: cover;
+  color: #f1f1f1;
+}
+
+.section-dark {
+  background-color: #0b0c10;
+  color: #fff;
+}
+
+.card {
+  background-color: #1f2833;
+  color: #f1f1f1;
+  border: none;
+}
+
+footer {
+  background-color: #0b0c10;
+}
+
+/* Hero */
+header {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover no-repeat;
+}
+
+/* Speakers */
+.speaker-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 12px;
+}
+
+.speaker-card img {
+  transition: transform 0.6s ease;
+}
+
+.speaker-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.speaker-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Gallery */
+.gallery-item img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, #0d0d2b, #1a1a40, #2c2c54);
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.contact-input {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.contact-btn {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #ffcc00;
+  color: #000;
+  box-shadow: 0 0 15px #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Fade-in Effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating Stars (canvas background) */
+#stars-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent;
+}
+/* Brand subtle glow/pulse */
+.animate-brand {
+  animation: glowPulse 3s infinite alternate;
+}
+@keyframes glowPulse {
+  from { text-shadow: 0 0 5px #fff, 0 0 10px #0dcaf0; }
+  to { text-shadow: 0 0 15px #0dcaf0, 0 0 25px #0dcaf0; }
+}
+
+/* Glowing underline effect on nav links */
+.cosmic-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.cosmic-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #0dcaf0;
+  transition: width 0.3s ease;
+}
+.cosmic-link:hover {
+  color: #0dcaf0 !important;
+}
+.cosmic-link:hover::after {
+  width: 100%;
+}
+
+/* Scroll effect for navbar */
+.cosmic-navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(6px);
+  transition: background 0.4s ease;
+}
+
+/* Smooth mobile dropdown */
+.navbar-collapse.collapse.show {
+  animation: slideDown 0.4s ease;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
