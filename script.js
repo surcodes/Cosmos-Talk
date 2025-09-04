@@ -98,28 +98,45 @@ window.addEventListener("load", () => {
 const hoverSound = document.getElementById("hoverSound");
 const humSound = document.getElementById("humSound");
 
-// set volume
-humSound.volume = 0.3;
-hoverSound.volume = 0.6;
+document.addEventListener("DOMContentLoaded", () => {
+  const humSound = document.getElementById("humSound");
+  const hoverSound = document.getElementById("hoverSound");
+  const toggleBtn = document.getElementById("soundToggle");
 
-// browsers block autoplay — wait for any interaction
-function startHum() {
-  if (humSound.paused) {
-    humSound.play().catch(err => {
-      console.log("Autoplay blocked:", err);
+  humSound.volume = 0.3; // subtle background
+  hoverSound.volume = 0.6; // whoosh effect
+
+  let isPlaying = false;
+
+  // Function to start music
+  function startHum() {
+    humSound.play().then(() => {
+      isPlaying = true;
+      if (toggleBtn) toggleBtn.textContent = "🔊 Sound On";
+    }).catch(err => {
+      console.log("Autoplay blocked, waiting for interaction:", err);
+    });
+
+    document.removeEventListener("click", startHum);
+    document.removeEventListener("keydown", startHum);
+  }
+
+  // First click or key starts the sound
+  document.addEventListener("click", startHum);
+  document.addEventListener("keydown", startHum);
+
+  // Toggle button logic (only if button exists)
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      if (isPlaying) {
+        humSound.pause();
+        isPlaying = false;
+        toggleBtn.textContent = "🔇 Sound Off";
+      } else {
+        humSound.play();
+        isPlaying = true;
+        toggleBtn.textContent = "🔊 Sound On";
+      }
     });
   }
-}
-
-// listen for first interaction
-["click", "keydown", "scroll"].forEach(evt => {
-  document.addEventListener(evt, startHum, { once: true });
-});
-
-// hover whoosh sound
-document.querySelectorAll(".btn, .cosmic-link").forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    hoverSound.currentTime = 0;
-    hoverSound.play();
-  });
 });
