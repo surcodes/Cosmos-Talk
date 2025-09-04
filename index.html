@@ -3,16 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechFest 2025</title>
+  <title>Cosmos Talks 2025</title>
   <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Cosmos Background CSS -->
+  <style>
+    body {
+      background: url('https://www.transparenttextures.com/patterns/stardust.png'), #0b0c10;
+      background-size: cover;
+      color: #f1f1f1;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover no-repeat;
+    }
+    .section-dark {
+      background-color: #0b0c10;
+      color: #fff;
+    }
+    .card {
+      background-color: #1f2833;
+      color: #f1f1f1;
+      border: none;
+    }
+    footer {
+      background-color: #0b0c10;
+    }
+  </style>
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">TechFest 2025</a>
+      <a class="navbar-brand fw-bold" href="#">Cosmos Talks 2025</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,31 +56,32 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <header id="home" class="bg-primary text-white text-center py-5">
+  <header id="home" class="text-white text-center py-5">
     <div class="container">
-      <h1 class="display-3 fw-bold">Welcome to TechFest 2025</h1>
-      <p class="lead">The biggest student-run tech event of the year.</p>
-      <a href="#contact" class="btn btn-light btn-lg">Register Now</a>
+      <h1 class="display-3 fw-bold">Cosmos Talks 2025</h1>
+      <p class="lead">Science, Space & Philosophy — A Dialogue with the Greatest Minds</p>
+      <a href="#contact" class="btn btn-outline-light btn-lg">Join the Journey</a>
     </div>
   </header>
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="py-5">
+  <section id="about" class="py-5 section-dark">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0">
-          <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow" alt="Event Image">
+          <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564" class="img-fluid rounded shadow" alt="Cosmos">
         </div>
         <div class="col-md-6">
-          <h2>About TechFest</h2>
-          <p class="text-muted">
-            TechFest 2025 brings together students, professionals, and innovators from across the country. 
-            From coding competitions to robotics showcases, this event is packed with learning and fun.
+          <h2>About Cosmos Talks</h2>
+          <p>
+            Cosmos Talks 2025 is not just a festival, it’s a cosmic gathering. 
+            A chance to hear from the greatest scientific thinkers of all time, 
+            exploring physics, astronomy, and the meaning of our place in the universe.
           </p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">🔥 Hackathon & Coding Contests</li>
-            <li class="list-group-item">🤖 Robotics & AI Demos</li>
-            <li class="list-group-item">🎤 Guest Lectures from Industry Experts</li>
+          <ul class="list-group list-group-flush bg-transparent">
+            <li class="list-group-item bg-transparent text-white">🌌 Exploring Space-Time Mysteries</li>
+            <li class="list-group-item bg-transparent text-white">🪐 The Cosmic Perspective</li>
+            <li class="list-group-item bg-transparent text-white">✨ Science Meets Philosophy</li>
           </ul>
         </div>
       </div>
@@ -63,31 +89,31 @@
   </section>
 
   <!-- SCHEDULE SECTION -->
-  <section id="schedule" class="bg-light py-5">
+  <section id="schedule" class="py-5 bg-dark text-white">
     <div class="container">
-      <h2 class="text-center mb-4">Event Schedule</h2>
+      <h2 class="text-center mb-4">Schedule of the Universe</h2>
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="card border-0 shadow h-100">
+          <div class="card h-100 shadow">
             <div class="card-body">
-              <h5 class="card-title">Day 1</h5>
-              <p class="card-text">Opening ceremony, keynote sessions, and coding challenges begin.</p>
+              <h5 class="card-title">Day 1: Relativity & Beyond</h5>
+              <p class="card-text">Einstein opens with a deep dive into relativity, time, and the bending of space. Expect your worldview to shift.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card border-0 shadow h-100">
+          <div class="card h-100 shadow">
             <div class="card-body">
-              <h5 class="card-title">Day 2</h5>
-              <p class="card-text">Workshops on AI, Cybersecurity, and Cloud Computing, followed by robotics demos.</p>
+              <h5 class="card-title">Day 2: Black Holes & Infinity</h5>
+              <p class="card-text">Stephen Hawking explores black holes, the nature of time, and humanity’s survival in the cosmos.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card border-0 shadow h-100">
+          <div class="card h-100 shadow">
             <div class="card-body">
-              <h5 class="card-title">Day 3</h5>
-              <p class="card-text">Final presentations, prize distribution, and networking sessions.</p>
+              <h5 class="card-title">Day 3: The Cosmic Perspective</h5>
+              <p class="card-text">Carl Sagan closes with wonder, storytelling, and reflections on humanity’s place in the stars.</p>
             </div>
           </div>
         </div>
@@ -96,34 +122,34 @@
   </section>
 
   <!-- SPEAKERS SECTION -->
-  <section id="speakers" class="py-5">
+  <section id="speakers" class="py-5 section-dark">
     <div class="container">
-      <h2 class="text-center mb-4">Featured Speakers</h2>
+      <h2 class="text-center mb-4">Great Minds of the Cosmos</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Speaker 1">
+            <img src="Albert_Einstein.webp" class="card-img-top" alt="Einstein">
             <div class="card-body">
-              <h5 class="card-title">Dr. Jane Smith</h5>
-              <p class="card-text">AI Researcher on the future of Artificial Intelligence.</p>
+              <h5 class="card-title">Albert Einstein</h5>
+              <p class="card-text">The Father of Modern Physics — unlocking relativity and showing how imagination fuels discovery.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Speaker 2">
+            <img src="Stephen_Hawking.StarChild.webp" class="card-img-top" alt="Hawking">
             <div class="card-body">
-              <h5 class="card-title">Mr. John Doe</h5>
-              <p class="card-text">Cybersecurity Expert discussing digital safety.</p>
+              <h5 class="card-title">Stephen Hawking</h5>
+              <p class="card-text">The Voice of the Universe — expanding our vision of black holes, time, and the destiny of space itself.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Speaker 3">
+            <img src="Carl_Sagan.webp" class="card-img-top" alt="Sagan">
             <div class="card-body">
-              <h5 class="card-title">Prof. Emily Davis</h5>
-              <p class="card-text">Robotics Engineer on innovations in automation.</p>
+              <h5 class="card-title">Carl Sagan</h5>
+              <p class="card-text">The Cosmic Storyteller — weaving science into poetry and helping us see that we are all made of starstuff.</p>
             </div>
           </div>
         </div>
@@ -132,30 +158,30 @@
   </section>
 
   <!-- GALLERY SECTION -->
-  <section id="gallery" class="bg-light py-5">
+  <section id="gallery" class="py-5 bg-dark text-white">
     <div class="container">
-      <h2 class="text-center mb-4">Gallery</h2>
+      <h2 class="text-center mb-4">Stellar Gallery</h2>
       <div class="row g-3">
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid rounded shadow" alt="Gallery 1">
+          <img src="techfest.webp" class="img-fluid rounded shadow" alt="Gallery 1">
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid rounded shadow" alt="Gallery 2">
+          <img src="tech.webp" class="img-fluid rounded shadow" alt="Gallery 2">
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid rounded shadow" alt="Gallery 3">
+          <img src="fest.webp" class="img-fluid rounded shadow" alt="Gallery 3">
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid rounded shadow" alt="Gallery 4">
+          <img src="tf.webp" class="img-fluid rounded shadow" alt="Gallery 4">
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="py-5">
+  <section id="contact" class="py-5 section-dark">
     <div class="container">
-      <h2 class="text-center mb-4">Contact Us</h2>
+      <h2 class="text-center mb-4">Reach Out to the Stars</h2>
       <div class="row justify-content-center">
         <div class="col-md-6">
           <form>
@@ -168,7 +194,7 @@
             <div class="mb-3">
               <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            <button type="submit" class="btn btn-light w-100">Send Message</button>
           </form>
         </div>
       </div>
@@ -176,9 +202,9 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center py-3">
+  <footer class="text-white text-center py-3">
     <div class="container">
-      <p class="mb-0">&copy; 2025 TechFest. All rights reserved.</p>
+      <p class="mb-0">&copy; 2025 Cosmos Talks. All rights reserved.</p>
     </div>
   </footer>
 
