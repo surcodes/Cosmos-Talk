@@ -135,3 +135,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Reveal on scroll
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    appearOnScroll.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+// About section stars
+const canvas = document.getElementById("aboutStars");
+const ctx = canvas.getContext("2d");
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
+
+const stars = [];
+for(let i=0;i<100;i++){
+  stars.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    r: Math.random()*2,
+    d: Math.random()*1
+  });
+}
+
+function drawStars(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  stars.forEach(s => {
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+    ctx.fillStyle = "rgba(255,255,255,0.6)";
+    ctx.fill();
+    s.y += s.d;
+    if(s.y>canvas.height){ s.y=0; s.x=Math.random()*canvas.width; }
+  });
+  requestAnimationFrame(drawStars);
+}
+drawStars();

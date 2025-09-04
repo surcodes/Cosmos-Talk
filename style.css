@@ -268,3 +268,41 @@ html {
   from { transform: translateX(-50%) translateY(-50%) rotate(25deg); }
   to { transform: translateX(50%) translateY(50%) rotate(25deg); }
 }
+/* Floating & Fade Animations */
+.animate-text, .animate-image, .animate-list {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-text.delay-1 { transition-delay: 0.3s; }
+.animate-list.delay-2 { transition-delay: 0.6s; }
+
+.fade-in.visible .animate-text,
+.fade-in.visible .animate-image,
+.fade-in.visible .animate-list {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image floating gently */
+.image-float img {
+  animation: floatImage 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-15px) scale(1.02); }
+  100% { transform: translateY(0px) scale(1); }
+}
+
+/* Text floating subtly */
+.text-float h2, .text-float p, .text-float li {
+  animation: floatText 5s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
