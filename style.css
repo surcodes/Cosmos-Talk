@@ -172,14 +172,3 @@ header {
   font-weight: 600;
   text-shadow: 0 0 8px #0dcaf0;
 }
-/* Scroll progress bar */
-#scrollProgress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #0dcaf0, #ffcc00, #ff0080);
-  width: 0%;
-  z-index: 9999;
-  box-shadow: 0 0 10px rgba(255,255,255,0.5);
-}
