@@ -17,7 +17,7 @@ body {
 }
 
 footer {
-  background-color: #0b0c10;
+  background-color: #000000;
 }
 
 /* Hero */
@@ -57,7 +57,7 @@ header {
 
 /* Contact Section */
 .contact-section {
-  background: linear-gradient(135deg, #0d0d2b, #1a1a40, #2c2c54);
+  background: linear-gradient(135deg, #0d0d2b, #1a1a40, #542c39);
 }
 
 .contact-card {
