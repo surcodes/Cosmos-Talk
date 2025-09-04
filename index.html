@@ -13,6 +13,12 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target=".cosmic-navbar" data-bs-offset="80" tabindex="0">
 
+  <!-- BLACK HOLE LOADER -->
+<div id="loader">
+  <div class="blackhole"></div>
+</div>
+
+
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow cosmic-navbar">
     <div class="container">
@@ -34,6 +40,11 @@
     </div>
   </nav>
 
+<!-- SOUND FX -->
+<audio id="hoverSound" src="space sound interstellar.m4a" preload="auto"></audio>
+<audio id="humSound" src="sounds/cosmic-hum.mp3" preload="auto" loop autoplay></audio>
+
+
   <!-- HERO SECTION -->
   <header id="home" class="text-white text-center py-5 fade-in">
     <div class="container">
@@ -41,6 +52,10 @@
       <p class="lead">Science, Space & Philosophy — A Dialogue with the Greatest Minds</p>
       <a href="#contact" class="btn btn-outline-light btn-lg">Join the Journey</a>
     </div>
+    <div class="equations">
+  E = mc² · ∆t = ∆x / c · Gμν + Λgμν = (8πG/c⁴)Tμν
+</div>
+
   </header>
 
   <!-- ABOUT SECTION -->
@@ -151,6 +166,20 @@
       </div>
     </div>
   </section>
+
+  <!-- COUNTDOWN TIMER -->
+<section id="countdown" class="py-5 bg-black text-center text-white">
+  <div class="container">
+    <h2 class="mb-4">Countdown to Cosmos Talks</h2>
+    <div id="timer" class="d-flex justify-content-center gap-4 fs-1 fw-bold">
+      <div><span id="days">00</span><div class="small">Days</div></div>
+      <div><span id="hours">00</span><div class="small">Hours</div></div>
+      <div><span id="minutes">00</span><div class="small">Minutes</div></div>
+      <div><span id="seconds">00</span><div class="small">Seconds</div></div>
+    </div>
+  </div>
+</section>
+
 
   <!-- GALLERY SECTION -->
   <section id="gallery" class="py-5 bg-dark text-white">

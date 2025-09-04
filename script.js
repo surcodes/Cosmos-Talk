@@ -75,3 +75,41 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Countdown Timer
+const eventDate = new Date("2025-12-01T09:00:00").getTime();
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
+}, 1000);
+
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
+const hoverSound = document.getElementById("hoverSound");
+const humSound = document.getElementById("humSound");
+
+// Make sure cosmic hum starts after first interaction
+document.addEventListener("click", () => {
+  if (humSound.paused) {
+    humSound.volume = 0.3; // lower volume so it's ambient
+    humSound.play();
+  }
+});
+
+// Play "whoosh" when hovering over buttons & nav links
+document.querySelectorAll(".btn, .cosmic-link").forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    hoverSound.currentTime = 0;
+    hoverSound.play();
+  });
+});

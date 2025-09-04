@@ -172,3 +172,55 @@ header {
   font-weight: 600;
   text-shadow: 0 0 8px #0dcaf0;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+.cosmic-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cosmic-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: cyan;
+  transition: all 0.3s ease;
+}
+
+.cosmic-link:hover::after {
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+#loader {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.blackhole {
+  width: 80px;
+  height: 80px;
+  border: 5px solid transparent;
+  border-top: 5px solid purple;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite, glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px purple; }
+  100% { box-shadow: 0 0 40px violet; }
+}
